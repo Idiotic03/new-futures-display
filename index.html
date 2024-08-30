@@ -25,7 +25,7 @@
             text-align: left;
             width: 100%;
             color: white;
-            font-size: 2.5em;
+            font-size: 3em;
             font-family: Arial, sans-serif;
             pointer-events: none;
         }
@@ -67,8 +67,9 @@
         function updateDateTime() {
             const now = new Date();
             
-            const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+            const dateOptions = { weekday: 'long', month: 'long', day: 'numeric' };
             const date = now.toLocaleDateString(undefined, dateOptions);
+            const year = now.getFullYear();
             
             let hours = now.getHours();
             let minutes = now.getMinutes();
@@ -79,7 +80,7 @@
             
             const time = `${hours}<span class="blink">:</span>${minutes} ${period}`;
             
-            document.getElementById('date').textContent = date;
+            document.getElementById('date').textContent = `${date} ${year}`;
             document.getElementById('time').innerHTML = time;
         }
 
