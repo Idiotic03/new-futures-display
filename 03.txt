@@ -1,0 +1,11 @@
+<div style="text-align: center; max-width: 90%; margin: 0 auto; overflow: hidden;">
+    <h2 style="color: #E91E63; font-family: 'Trebuchet MS', sans-serif; font-size: 1.6em; margin: 5px 0;">
+        📅 NEXT WEEK ON TUESDAY, SEPTEMBER 24TH
+    </h2>
+    <p style="font-size: 1.2em; color: #333; font-family: 'Verdana', sans-serif; margin: 5px 0;">
+        SENIOR MEETING!
+    </p>
+    <p style="font-size: 1em; color: #555; font-family: 'Georgia', serif; margin: 5px 0;">
+        GET READY TO DISCUSS YOUR EXCITING FUTURE! 🎓
+    </p>
+</div>

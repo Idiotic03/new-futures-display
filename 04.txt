@@ -1,0 +1,20 @@
+<div style="text-align: center; max-width: 90%; margin: 0 auto; overflow: hidden;">
+    <h2 style="color: #8B4513; font-family: 'Trebuchet MS', sans-serif; font-size: 1.8em; margin: 5px 0;">
+        📝 TUTORING - TUESDAYS AND WEDNESDAYS
+    </h2>
+    <p style="font-size: 1.2em; color: #333; font-family: 'Verdana', sans-serif; margin: 5px 0;">
+        8:45 TO 9:15 IN THE CAFETERIA
+    </p>
+    <p style="font-size: 1em; color: #555; font-family: 'Georgia', serif; margin: 5px 0;">
+        SIGN-UP THE DAY BEFORE WITH MARIA AT THE FRONT DESK
+        OR SCAN THE QR CODE TO GET CHILDCARE.
+    </p>
+    <p style="font-size: 1.2em; color: #333; font-family: 'Trebuchet MS', sans-serif; margin: 5px 0;">
+        GET HELP WITH CLASSWORK, MAKE-UP WORK, AND HOMEWORK!
+    </p>
+    <p style="font-size: 1em; color: #555; font-family: 'Georgia', serif; margin: 5px 0;">
+        - ADAM GUTIERREZ<br>
+        - KELLY LASATER<br>
+        - RACHEL KILMAN
+    </p>
+</div>
