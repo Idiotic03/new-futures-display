@@ -1,21 +1,17 @@
-<div style="text-align: center; max-width: 90%; margin: 0 auto; overflow: hidden;">
-    <h2 style="color: #FF5733; font-family: 'Trebuchet MS', sans-serif; font-size: 1.6em; margin: 5px 0;">
-        🎉 THIS FRIDAY, SEPTEMBER 20TH 🎉
+<div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
+    <h2 style="color: #FF5733; font-family: 'Trebuchet MS', sans-serif; font-size: 2.8em; margin: 5px 0;">
+        🎉THIS FRIDAY, SEPTEMBER 20TH🎉
     </h2>
-    <p style="font-size: 1.2em; color: #333; margin: 5px 0;">
+    <p style="font-size: 3.3em; color: #333; margin: 5px 0;">
         FROM 9:15 AM - 10 AM
     </p>
-    <h3 style="color: #007BFF; font-family: 'Georgia', serif; font-size: 1.4em; margin: 5px 0;">
+    <h3 style="color: #007BFF; font-family: 'Georgia', serif; font-size: 3em; margin: 5px 0;">
         WELCOME & TITLE I ANNUAL MEETING
     </h3>
-    <p style="font-size: 1em; color: #555; font-family: 'Verdana', sans-serif; margin: 5px 0;">
+    <p style="font-size: 3em; color: #555; font-family: 'Verdana', sans-serif; margin: 5px 0;">
         🍩 ENJOY DONUTS & COFFEE! ☕
     </p>
-    <hr style="border-top: 2px dashed #333; margin: 10px 0;">
-    <p style="font-size: 1.2em; color: #333; font-family: 'Trebuchet MS', sans-serif; margin: 5px 0;">
-        9:15 AM - 4 PM
-    </p>
-    <h3 style="color: #28A745; font-family: 'Georgia', serif; font-size: 1.4em; margin: 5px 0;">
-        🏠 OPEN HOUSE 🏠
+    <h3 style="color: #28A745; font-family: 'Georgia', serif; font-size: 2em; margin: 5px 0;">
+        🏠 !!OPEN HOUSE!! 🏠
     </h3>
 </div>
