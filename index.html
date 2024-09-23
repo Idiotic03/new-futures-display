@@ -19,8 +19,8 @@
             top: 13%; /* Adjust as needed */
             left: 71.2%; /* Center horizontally */
             transform: translateX(-50%);
-            width: 43.2%; /* Adjust width as needed */
-            height: 35.32%; /* Adjust height as needed */
+            width: 42%; /* Adjust width as needed */
+            height: 33.5%; /* Adjust height as needed */
             background-color: white;
             opacity: 0; /* Start invisible */
             z-index: 997;
@@ -55,20 +55,6 @@
             opacity: 1;
         }
         
-        /* Styles for the duplicate Zia Logo and Zia Lines */
-        #duplicate-zia-logo, #duplicate-zia-lines {
-            position: absolute;
-            top: 0;
-            left: 46.14%;
-            transform: translateX(-50%);
-            width: 110.3%; /* Adjust size as needed */
-            height: 55.3%; /* Adjust size as needed */
-            max-height: 100%;
-            object-fit: contain; /* Ensures the image fits without stretching */
-            opacity: 0; /* Start invisible */
-            z-index: 999; /* Ensure it's on top of all other layers */
-            transition: opacity 1s ease;
-        }
 
         /* Visible class to control fading */
         #duplicate-zia-logo.visible, #duplicate-zia-lines.visible, #news-box.visible {
@@ -87,8 +73,7 @@
         }
 
         #layer1 { 
-            z-index: 1000; 
-            top: 1; /* Adjust this value to move the logo down */
+            z-index: 1000;
         }
         
         /* Adjust size and original position of Zia Logo */
@@ -114,7 +99,9 @@
         }
 
         /* Locking static layers in place */
-        #layer1 { z-index: 1000; } /* Logo1-01.png - Frontmost layer */
+        #layer1 { z-index: 1000; top: 10;} /* Logo1-01.png - Frontmost layer */
+        #layer5 { z-index: 4; object-fit: fill; opacity: 0.7;} /* Zia Logo-01.png - Placed in the middle */
+        #layer6 { z-index: 2; object-fit: fill; opacity: 0.7;} /* Zia Lines-01.png - Behind Zia Logo */
         #layer8 { z-index: 1; } /* Orange Background-06.png - Background */
 
 
@@ -195,6 +182,8 @@
 <body>
     <!-- Locked in place layers -->
     <img src="Orange Background-06.png" id="layer8" class="layer" alt="Background">
+    <img src="Zia Lines-01.png" id="layer6" class="layer" alt="Zia Lines" > 
+    <img src="Zia Logo-01.png" id="layer5" class="layer" alt="Zia Logo">
     <img src="NF LOGO v3.png" id="layer1" class="layer" alt="Logo1">
 
     <!-- Moving layers with duplicates for seamless loop -->
