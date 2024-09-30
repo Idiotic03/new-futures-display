@@ -1,22 +1,17 @@
 <div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
-    <h2 style="color: #FF9800; font-family: 'Trebuchet MS', sans-serif; font-size: 2.8em; margin: 5px 0;">
-        🐾 ZOO FIELD TRIP THIS FRIDAY! 🐾
+    <h2 style="color: #FF5733; font-family: 'Trebuchet MS', sans-serif; font-size: 2.8em; margin: 5px 0;">
+        📚 QUARTER 1 FINALS ARE HERE! 📚
     </h2>
     <p style="font-size: 3.3em; color: #333; margin: 5px 0;">
-        FRIDAY, SEPTEMBER 27TH
+        Be ready for testing Monday & Tuesday
     </p>
     <h3 style="color: #007BFF; font-family: 'Georgia', serif; font-size: 3em; margin: 5px 0;">
-        REMEMBER TO DRESS IN LAYERS! 🧥
+        YOU'VE GOT THIS! ✨
     </h3>
-    <p style="font-size: 3em; color: #333; font-family: 'Trebuchet MS', sans-serif; margin: 5px 0;">
-        🐒 🦁 🦓 🦒 🐘 🦜
+    <p style="font-size: 3em; color: #555; font-family: 'Verdana', sans-serif; margin: 5px 0;">
+        TRY YOUR BEST AND GOOD LUCK !!! 🍀🍀🍀
     </p>
     <h3 style="color: #28A745; font-family: 'Georgia', serif; font-size: 2em; margin: 5px 0;">
-        🦒 GET READY FOR A WILD TIME! 🦁
+        REMEMBER TO STAY POSITIVE AND KEEP GOING! 💪💪
     </h3>
-
-    <!-- Right Side: Image -->
-    <div style="flex-shrink: 0; margin-top: 10px;">
-        <img src="zoo.jpg" alt="Zoo Image" style="max-width: 120px; max-height: 120px;">
-    </div>
 </div>
