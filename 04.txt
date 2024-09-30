@@ -3,12 +3,12 @@
         🏥 NURSE ON CAMPUS! 🏥
     </h2>
     <p style="font-size: 3.3em; color: #333; margin: 5px 0;">
-        MONDAY, SEPTEMBER 23RD & THURSDAY, SEPTEMBER 26TH
+        Drop by and come say hi sometime!
     </p>
     <h3 style="color: #007BFF; font-family: 'Georgia', serif; font-size: 3em; margin: 5px 0;">
         AVAILABLE ALL DAY
     </h3>
-    <p style="font-size: 3em; color: #555; font-family: 'Verdana', sans-serif; margin: 5px 0;">
-        STOP BY IF YOU NEED ASSISTANCE!
+    <p style="font-size: 2em; color: #555; font-family: 'Verdana', sans-serif; margin: 5px 0;">
+        STOP BY IF YOU HAVE ANY QUESTIONS OR NEED ASSISTANCE! :)
     </p>
 </div>
