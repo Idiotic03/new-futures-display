@@ -8,7 +8,7 @@
     <h3 style="color: #007BFF; font-family: 'Georgia', serif; font-size: 3em; margin: 5px 0;">
         TALK TO YOUR TEACHERS ABOUT YOUR PROGRESS!
     </h3>
-    <p style="font-size: 3em; color: #555; font-family: 'Verdana', sans-serif; margin: 5px 0;">
+    <p style="font-size: 1.6em; color: #555; font-family: 'Verdana', sans-serif; margin: 5px 0;">
         STAY CONNECTED & CONTINUE THE CONVERSATION!
     </p>
 </div>
