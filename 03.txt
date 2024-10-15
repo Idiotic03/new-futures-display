@@ -3,7 +3,7 @@
         👶 WIC ON CAMPUS! 👶
     </h2>
     <p style="font-size: 3.3em; color: #333; margin: 5px 0;">
-        TUESDAY, OCTOBER 8TH
+        TUESDAY, OCTOBER 15TH
     </p>
     <h3 style="color: #007BFF; font-family: 'Georgia', serif; font-size: 3em; margin: 5px 0;">
         1:00 PM - 4:00 PM
