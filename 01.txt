@@ -1,14 +1,14 @@
 <div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
     <h2 style="color: #FF5733; font-family: 'Trebuchet MS', sans-serif; font-size: 2.8em; margin: 5px 0;">
-        📢 LONG ADVISORY FOR ALL STUDENTS & STAFF
+        🍁 WELCOME BACK, STUDENTS & STAFF! 🍁
     </h2>
     <p style="font-size: 3.3em; color: #333; margin: 5px 0;">
-        MONDAY, OCTOBER 7TH
+        WE HOPE YOU HAD A RESTFUL FALL BREAK!
     </p>
     <h3 style="color: #007BFF; font-family: 'Georgia', serif; font-size: 3em; margin: 5px 0;">
-        9:15 AM - 9:55 AM
+        READY FOR A GREAT SECOND HALF OF THE SEMESTER!
     </h3>
     <p style="font-size: 3em; color: #555; font-family: 'Verdana', sans-serif; margin: 5px 0;">
-        MEET IN THE CAFETERIA
+        LET'S START THIS QUARTER OFF STRONG! 💪
     </p>
 </div>
