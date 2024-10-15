@@ -1,14 +1,17 @@
 <div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
     <h2 style="color: #FF5733; font-family: 'Trebuchet MS', sans-serif; font-size: 2.8em; margin: 5px 0;">
-        📅 PARENT-TEACHER CONFERENCES
+        📚 !TUTORING AVAILABLE! 📚
     </h2>
     <p style="font-size: 3.3em; color: #333; margin: 5px 0;">
-        WEDNESDAY, OCTOBER 9TH & THURSDAY, OCTOBER 10TH
+        EVERY TUESDAY & WEDNESDAY MORNING
     </p>
     <h3 style="color: #007BFF; font-family: 'Georgia', serif; font-size: 3em; margin: 5px 0;">
-        TALK TO YOUR TEACHERS ABOUT YOUR PROGRESS!
+        FROM 8:45 AM - 9:15 AM
     </h3>
-    <p style="font-size: 1.6em; color: #555; font-family: 'Verdana', sans-serif; margin: 5px 0;">
-        STAY CONNECTED & CONTINUE THE CONVERSATION!
+    <p style="font-size: 3em; color: #555; font-family: 'Verdana', sans-serif; margin: 5px 0;">
+        HELD IN THE CAFETERIA, STOP BY FOR SUPPORT!
+    </p>
+    <p style="font-size: 2.5em; color: #333; margin: 5px 0;">
+        ALL SUBJECTS WELCOME!
     </p>
 </div>
