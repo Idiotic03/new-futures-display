@@ -6,6 +6,6 @@
         TUESDAY, OCTOBER 22ND
     </p>
     <h3 style="color: #FF0000; font-family: 'Georgia', serif; font-size: 2.2em; margin: 5px 0;">
-        A PICTURE'S WORTH A THOUSAND WORDS YA' KNOW, DON'T MISS THE CHANCE TO MAKE MEMORIES OR REDO MEMORIES!
+        A picture's worth a thousand words ya'know! Don't miss the chance to make memories or redo memories!
     </h3>
 </div>
