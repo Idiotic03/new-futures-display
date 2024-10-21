@@ -1,14 +1,14 @@
 <div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
-    <h2 style="color: #FF5733; font-family: 'Trebuchet MS', sans-serif; font-size: 3.5em; margin: 5px 0;">
+    <h2 style="color: #FF5733; font-family: 'Trebuchet MS', sans-serif; font-size: 3.8em; margin: 5px 0;">
         👶 WIC ON CAMPUS! 👶
     </h2>
-    <p style="font-size: 3.3em; color: #333; margin: 5px 0;">
+    <p style="font-size: 3.4em; color: #333; margin: 5px 0;">
         TUESDAY, OCTOBER 22ND
     </p>
-    <h3 style="color: #007BFF; font-family: 'Georgia', serif; font-size: 3em; margin: 5px 0;">
+    <h3 style="color: #007BFF; font-family: 'Georgia', serif; font-size: 3.3em; margin: 5px 0;">
         1:00 PM - 4:00 PM
     </h3>
-    <p style="font-size: 2em; color: #555; font-family: 'Verdana', sans-serif; margin: 5px 0;">
+    <p style="font-size: 3.2em; color: #555; font-family: 'Verdana', sans-serif; margin: 5px 0;">
         STOP BY FOR SUPPORT AND RESOURCES!
     </p>
 </div>
