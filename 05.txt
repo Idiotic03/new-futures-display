@@ -1,14 +1,11 @@
 <div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
-    <h2 style="color: #FF0000; font-family: 'Trebuchet MS', sans-serif; font-size: 3.5em; margin: 5px 0;">
-        🎃 MONSTER'S BALL 🎃
+    <h2 style="color: #1E90FF; font-family: 'Trebuchet MS', sans-serif; font-size: 3.5em; margin: 5px 0;">
+        🍂 WELCOME, NOVEMBER! 🍂
     </h2>
     <p style="font-size: 3.3em; color: #333; margin: 5px 0;">
-        THURSDAY, OCTOBER 31ST
+        NEW MONTH, NEW OPPORTUNITIES!
     </p>
-    <h3 style="color: #FF0000; font-family: 'Georgia', serif; font-size: 2.2em; margin: 5px 0;">
-        9:15 AM - 9:55 AM
+    <h3 style="color: #1E90FF; font-family: 'Georgia', serif; font-size: 2.2em; margin: 5px 0;">
+        Let’s make this month one to remember. Stay focused, stay positive, and keep moving forward!
     </h3>
-    <p style="font-size: 1.7em; color: #555; margin: 5px 0;">
-        Join us for a spooktacular Monster’s Ball! Dress up, bring your family, and get ready for a hauntingly good time. Staff, please be in the cafeteria by 9:15 AM to help set the stage for our Halloween fun! 🎃👻
-    </p>
 </div>
