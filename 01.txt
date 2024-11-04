@@ -3,7 +3,7 @@
         📚 ADVISORY SESSION 📚
     </h2>
     <p style="font-size: 3.3em; color: #333; margin: 5px 0;">
-        MONDAY, OCTOBER 28TH
+        MONDAY, NOVEMBER 4th
     </p>
     <h3 style="color: #6A0DAD; font-family: 'Georgia', serif; font-size: 2.2em; margin: 5px 0;">
         11:51 AM - 12:16 PM
