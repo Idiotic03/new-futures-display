@@ -1,14 +1,11 @@
 <div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
     <h2 style="color: #6A0DAD; font-family: 'Trebuchet MS', sans-serif; font-size: 3.5em; margin: 5px 0;">
-        📚 ADVISORY SESSION 📚
+         🌟NO SCHOOL - VETERANS DAY🌟
     </h2>
     <p style="font-size: 3.3em; color: #333; margin: 5px 0;">
-        MONDAY, NOVEMBER 4th
+        MONDAY, NOVEMBER 11TH
     </p>
     <h3 style="color: #6A0DAD; font-family: 'Georgia', serif; font-size: 2.2em; margin: 5px 0;">
-        11:51 AM - 12:16 PM
+        Honoring all who served. Thank you, Veterans!
     </h3>
-    <p style="font-size: 1.7em; color: #555; margin: 5px 0;">
-        Join us for Advisory! A great time to connect with teachers and classmates, get updates, and prepare for a successful week. Don’t miss out!
-    </p>
 </div>
