@@ -1,11 +1,14 @@
 <div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
-    <h2 style="color: #FF0000; font-family: 'Trebuchet MS', sans-serif; font-size: 3.5em; margin: 5px 0;">
-        📘 AP WORKSHOP 📘
+    <h2 style="color: #FF5733; font-family: 'Trebuchet MS', sans-serif; font-size: 3.5em; margin: 5px 0;">
+        🥫 NOVEMBER FOOD DRIVE 🥫
     </h2>
     <p style="font-size: 3.3em; color: #333; margin: 5px 0;">
-        THURSDAY, NOVEMBER 14TH
+        SUPPORT MCKINNEY VENTO!
     </p>
-    <h3 style="color: #FF0000; font-family: 'Georgia', serif; font-size: 2.2em; margin: 5px 0;">
-        Don’t miss out on helpful AP exam prep and study strategies!
+    <h3 style="color: #FF5733; font-family: 'Georgia', serif; font-size: 2.2em; margin: 5px 0;">
+        Dime Time class is collecting food all month. Please drop off donations in Room 405 or the box near the Admin Office.
     </h3>
+    <p style="font-size: 1.7em; color: #555; margin: 5px 0;">
+        Let’s make a difference together and support families in need this holiday season!
+    </p>
 </div>
