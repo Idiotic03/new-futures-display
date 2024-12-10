@@ -1,14 +1,11 @@
 <div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
-    <h2 style="color: #333333; font-family: 'Trebuchet MS', sans-serif; font-size: 3.2em; margin: 5px 0;">
-        👩‍🎓 SENIOR MEETING 👨‍🎓
+    <h2 style="color: #FF5733; font-family: 'Trebuchet MS', sans-serif; font-size: 3.2em; margin: 5px 0;">
+        🕒 DIME TIME IS OPEN! 🕒
     </h2>
     <p style="font-size: 3.1em; color: #333; margin: 5px 0;">
-        TUESDAY, NOVEMBER 26TH
+        MONDAY, WEDNESDAY, & THURSDAY DURING LUNCH
     </p>
-    <h3 style="color: #333333; font-family: 'Georgia', serif; font-size: 2.2em; margin: 5px 0;">
-        3:15 PM - 4:15 PM
-    </h3>
     <p style="font-size: 1.7em; color: #555; margin: 5px 0;">
-        Seniors, join us to discuss important updates and plans as we get closer to graduation!
+        Open this week and next—don’t miss out!
     </p>
 </div>
