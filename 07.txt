@@ -1,0 +1,11 @@
+<div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
+    <h2 style="color: #8B0000; font-family: 'Trebuchet MS', sans-serif; font-size: 3.2em; margin: 5px 0;">
+        ☕ HOT COCOA AND CARTOONS ☕
+    </h2>
+    <p style="font-size: 3.1em; color: #333; margin: 5px 0;">
+        FRIDAY, DECEMBER 13TH
+    </p>
+    <h3 style="color: #8B0000; font-family: 'Georgia', serif; font-size: 2.2em; margin: 5px 0;">
+        Wear your comfy pajamas and enjoy a cozy day of fun!
+    </h3>
+</div>
