@@ -1,11 +1,14 @@
 <div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
-    <h2 style="color: #FF0000; font-family: 'Trebuchet MS', sans-serif; font-size: 3.2em; margin: 5px 0;">
-        🍬 CANDY CANE DAY 🍬
+    <h2 style="color: #FF5733; font-family: 'Trebuchet MS', sans-serif; font-size: 3.2em; margin: 5px 0;">
+        ❄️ FINAL WEEK BEFORE WINTER BREAK ❄️
     </h2>
     <p style="font-size: 3.1em; color: #333; margin: 5px 0;">
-        TUESDAY, DECEMBER 10TH
+        MONDAY, DECEMBER 16TH - FRIDAY, DECEMBER 20TH
     </p>
-    <h3 style="color: #FF0000; font-family: 'Georgia', serif; font-size: 2.2em; margin: 5px 0;">
-        Show your Spirit Week pride by wearing red and white!
+    <h3 style="color: #FF5733; font-family: 'Georgia', serif; font-size: 2.2em; margin: 5px 0;">
+        📚 FINALS ARE THIS WEEK 📚
     </h3>
+    <p style="font-size: 1.7em; color: #555; margin: 5px 0;">
+        Make sure you’re ready! Study up, stay focused, and finish strong. Winter break is almost here!
+    </p>
 </div>
