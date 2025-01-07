@@ -1,14 +1,14 @@
 <div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
-    <h2 style="color: #FF5733; font-family: 'Trebuchet MS', sans-serif; font-size: 3.2em; margin: 5px 0;">
-        ❄️ FINAL WEEK BEFORE WINTER BREAK ❄️
+    <h2 style="color: #1E90FF; font-family: 'Trebuchet MS', sans-serif; font-size: 3.2em; margin: 5px 0;">
+        🎉 WELCOME BACK NEW FUTURES! 🎉
     </h2>
     <p style="font-size: 3.1em; color: #333; margin: 5px 0;">
-        MONDAY, DECEMBER 16TH - FRIDAY, DECEMBER 20TH
+        LET’S MAKE 2025 OUR BEST YEAR YET!
     </p>
-    <h3 style="color: #FF5733; font-family: 'Georgia', serif; font-size: 2.2em; margin: 5px 0;">
-        📚 FINALS ARE THIS WEEK 📚
+    <h3 style="color: #1E90FF; font-family: 'Georgia', serif; font-size: 2.2em; margin: 5px 0;">
+        New Year, New Me, New Goals, New Dreams, NEW FUTURES!
     </h3>
-    <p style="font-size: 1.7em; color: #555; margin: 5px 0;">
-        Make sure you’re ready! Study up, stay focused, and finish strong. Winter break is almost here!
+    <p style="font-size: 1.5em; color: #555; margin: 5px 0;">
+        Let’s kick off the semester with positivity and determination! And remember to bring your CHROMEBOOK EVERYDAY! 
     </p>
 </div>
