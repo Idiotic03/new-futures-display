@@ -1,11 +1,14 @@
 <div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
-    <h2 style="color: #228B22; font-family: 'Trebuchet MS', sans-serif; font-size: 3.2em; margin: 5px 0;">
-        🎄 HOW THE GRINCH STOLE CHRISTMAS 🎄
+    <h2 style="color: #FF5733; font-family: 'Trebuchet MS', sans-serif; font-size: 3.2em; margin: 5px 0;">
+        🕊️ NO SCHOOL ON MONDAY! 🕊️
     </h2>
     <p style="font-size: 3.1em; color: #333; margin: 5px 0;">
-        WEDNESDAY, DECEMBER 11TH
+        JANUARY 20TH - MARTIN LUTHER KING JR. DAY
     </p>
-    <h3 style="color: #228B22; font-family: 'Georgia', serif; font-size: 2.2em; margin: 5px 0;">
-        Wear green or anything Grinch-themed to spread the holiday fun!
+    <h3 style="color: #FF5733; font-family: 'Georgia', serif; font-size: 2.2em; margin: 5px 0;">
+        School will be closed in observance of Dr. Martin Luther King Jr. Day.
     </h3>
+    <p style="font-size: 1.7em; color: #555; margin: 5px 0;">
+        Enjoy the day off as we reflect on his legacy. Classes resume Tuesday, January 21st.
+    </p>
 </div>
