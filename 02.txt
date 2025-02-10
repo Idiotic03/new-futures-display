@@ -1,14 +1,14 @@
 <div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
-    <h2 style="color: #32CD32; font-family: 'Trebuchet MS', sans-serif; font-size: 3.2em; margin: 5px 0;">
-        🌟 CONGRATULATIONS, AMARI SOLOMON-LULE! 🌟
+    <h2 style="color: #FF5733; font-family: 'Trebuchet MS', sans-serif; font-size: 3.8em; margin: 5px 0;">
+        👶 WIC ON CAMPUS! 👶
     </h2>
-    <p style="font-size: 3.1em; color: #333; margin: 5px 0;">
-        2025 SELFLESS SENIOR HONOREE
+    <p style="font-size: 3.5em; color: #333; margin: 5px 0;">
+        Every Tuesday From
     </p>
-    <h3 style="color: #32CD32; font-family: 'Georgia', serif; font-size: 2.2em; margin: 5px 0;">
-        The APS Education Foundation has selected 15 students for promoting positive change, and our very own Amari Solomon-Lule is among them!
+    <h3 style="color: #007BFF; font-family: 'Georgia', serif; font-size: 3.5em; margin: 5px 0;">
+        1:00 PM - 4:00 PM
     </h3>
-    <p style="font-size: 1.7em; color: #555; margin: 5px 0;">
-        We are so proud of you, Amari, for your dedication, compassion, and leadership. You inspire us all!
+    <p style="font-size: 3.5em; color: #555; font-family: 'Verdana', sans-serif; margin: 5px 0;">
+        STOP BY FOR SUPPORT AND RESOURCES!
     </p>
 </div>
