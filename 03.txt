@@ -6,6 +6,6 @@
             MONDAY, FEBRUARY 10TH
         </p>
         <p style="font-size: 1.7em; color: #555; margin: 5px 0;">
-            Show your love for your favorite team - <span style="font-style: italic;">(wear sports/team shirt, jersey, etc.)</span>
+            Show your love for your favorite team! - <span style="font-style: italic;">(wear sports/team shirt, jersey, etc.)</span>
         </p>
     </div>
