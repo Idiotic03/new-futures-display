@@ -1,14 +1,17 @@
 <div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
-    <h2 style="color: #6A0DAD; font-family: 'Trebuchet MS', sans-serif; font-size: 3.2em; margin: 5px 0;">
-        📚 ADVISORY SESSION 📚
+    <h2 style="color: #FF5733; font-family: 'Trebuchet MS', sans-serif; font-size: 2.8em; margin: 5px 0;">
+        📚 !TUTORING AVAILABLE! 📚
     </h2>
-    <p style="font-size: 3.1em; color: #333; margin: 5px 0;">
-        MONDAY, JANUARY 13TH
+    <p style="font-size: 3.3em; color: #333; margin: 5px 0;">
+        EVERY TUESDAY & WEDNESDAY MORNING
     </p>
-    <h3 style="color: #6A0DAD; font-family: 'Georgia', serif; font-size: 2.2em; margin: 5px 0;">
-        11:51 AM - 12:16 PM
+    <h3 style="color: #007BFF; font-family: 'Georgia', serif; font-size: 3em; margin: 5px 0;">
+        FROM 8:45 AM - 9:15 AM
     </h3>
-    <p style="font-size: 1.7em; color: #555; margin: 5px 0;">
-        Join us for Advisory! Stay updated, connect with your classmates, and prepare for the week ahead.
+    <p style="font-size: 2em; color: #555; font-family: 'Verdana', sans-serif; margin: 5px 0;">
+        HELD IN THE CAFETERIA, STOP BY FOR SUPPORT!
+    </p>
+    <p style="font-size: 2em; color: #333; margin: 5px 0;">
+        ALL SUBJECTS WELCOME!
     </p>
 </div>
