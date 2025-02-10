@@ -1,14 +1,11 @@
-<div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
-    <h2 style="color: #FF5733; font-family: 'Trebuchet MS', sans-serif; font-size: 3.2em; margin: 5px 0;">
-        🕊️ NO SCHOOL ON MONDAY! 🕊️
-    </h2>
-    <p style="font-size: 3.1em; color: #333; margin: 5px 0;">
-        JANUARY 20TH - MARTIN LUTHER KING JR. DAY
-    </p>
-    <h3 style="color: #FF5733; font-family: 'Georgia', serif; font-size: 2.2em; margin: 5px 0;">
-        School will be closed in observance of Dr. Martin Luther King Jr. Day.
-    </h3>
-    <p style="font-size: 1.7em; color: #555; margin: 5px 0;">
-        Enjoy the day off as we reflect on his legacy. Classes resume Tuesday, January 21st.
-    </p>
-</div>
+<div style="text-align: center; max-width: 98%; margin: 20px auto; overflow: hidden;">
+        <h2 style="color: #6A0DAD; font-family: 'Trebuchet MS', sans-serif; font-size: 3.2em; margin: 5px 0;">
+            🐛💤 SNUG AS A BUG 💤🐛
+        </h2>
+        <p style="font-size: 3.1em; color: #333; margin: 5px 0;">
+            WEDNESDAY, FEBRUARY 12TH
+        </p>
+        <p style="font-size: 1.7em; color: #555; margin: 5px 0;">
+            Wear your comfy PJ's and drink hot cocoa!
+        </p>
+    </div>
