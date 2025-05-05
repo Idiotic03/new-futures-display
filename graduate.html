@@ -1,0 +1,26 @@
+<div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
+    <h2 style="color: #32CD32; font-family: 'Trebuchet MS', sans-serif; font-size: 3.2em; margin: 5px 0;">
+        🎓 CONGRATULATIONS TO OUR 2025 GRADUATE! 🎓
+    </h2>
+    <p id="graduate-name" style="font-size: 4em; color: #000; margin: 5px 0; font-family: 'Georgia', serif;">
+        <!-- NAME WILL BE INJECTED HERE -->
+    </p>
+    <p style="font-size: 2em; color: #555; font-family: 'Verdana', sans-serif; margin: 5px 0;">
+        Your hard work, growth, and resilience have brought you here. We're proud of you!
+    </p>
+</div>
+
+<script>
+    // Load student names from a JSON file and rotate through them
+    fetch('graduates.json')
+        .then(response => response.json())
+        .then(names => {
+            const currentIndex = parseInt(localStorage.getItem('graduateIndex') || 0, 10);
+            const name = names[currentIndex] || "Unnamed Senior";
+            document.getElementById('graduate-name').textContent = name;
+
+            // Update index for next time
+            const nextIndex = (currentIndex + 1) % names.length;
+            localStorage.setItem('graduateIndex', nextIndex);
+        });
+</script>
