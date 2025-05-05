@@ -3,7 +3,7 @@
         🎓 CONGRATULATIONS TO OUR 2025 GRADUATE! 🎓
     </h2>
     <p id="graduate-name" style="font-size: 4em; color: #000; margin: 5px 0; font-family: 'Georgia', serif;">
-        <!-- NAME WILL BE INJECTED HERE -->
+        Loading...
     </p>
     <p style="font-size: 2em; color: #555; font-family: 'Verdana', sans-serif; margin: 5px 0;">
         Your hard work, growth, and resilience have brought you here. We're proud of you!
@@ -11,16 +11,25 @@
 </div>
 
 <script>
-    // Load student names from a JSON file and rotate through them
-    fetch('graduates.json')
-        .then(response => response.json())
-        .then(names => {
-            const currentIndex = parseInt(localStorage.getItem('graduateIndex') || 0, 10);
-            const name = names[currentIndex] || "Unnamed Senior";
-            document.getElementById('graduate-name').textContent = name;
+    const graduates = [
+        "Stephanie Armenta",
+        "Alicia Chavez",
+        "Spirit Deloris",
+        "Esmeralda Gomez",
+        "Phoenix Overholser",
+        "Xavier Padilla",
+        "Fabiola Perez Contreras",
+        "Adrianna Ramirez-Doporto",
+        "Jeimmy Rojas Simental",
+        "Andrea Solis",
+        "Amari Solomon-Iule",
+        "Nataliah Upshaw"
+    ];
 
-            // Update index for next time
-            const nextIndex = (currentIndex + 1) % names.length;
-            localStorage.setItem('graduateIndex', nextIndex);
-        });
+    let index = parseInt(localStorage.getItem("graduateIndex") || "0", 10);
+    if (index >= graduates.length) index = 0;
+
+    document.getElementById("graduate-name").textContent = graduates[index];
+
+    localStorage.setItem("graduateIndex", (index + 1) % graduates.length);
 </script>
