@@ -11,25 +11,30 @@
 </div>
 
 <script>
-    const graduates = [
-        "Stephanie Armenta",
-        "Alicia Chavez",
-        "Spirit Deloris",
-        "Esmeralda Gomez",
-        "Phoenix Overholser",
-        "Xavier Padilla",
-        "Fabiola Perez Contreras",
-        "Adrianna Ramirez-Doporto",
-        "Jeimmy Rojas Simental",
-        "Andrea Solis",
-        "Amari Solomon-Iule",
-        "Nataliah Upshaw"
-    ];
+    window.onload = function () {
+        const graduates = [
+            "Stephanie Armenta",
+            "Alicia Chavez",
+            "Spirit Deloris",
+            "Esmeralda Gomez",
+            "Phoenix Overholser",
+            "Xavier Padilla",
+            "Fabiola Perez Contreras",
+            "Adrianna Ramirez-Doporto",
+            "Jeimmy Rojas Simental",
+            "Andrea Solis",
+            "Amari Solomon-Iule",
+            "Nataliah Upshaw"
+        ];
 
-    let index = parseInt(localStorage.getItem("graduateIndex") || "0", 10);
-    if (index >= graduates.length) index = 0;
+        let index = parseInt(localStorage.getItem("graduateIndex") || "0", 10);
+        if (index >= graduates.length) index = 0;
 
-    document.getElementById("graduate-name").textContent = graduates[index];
+        const nameBox = document.getElementById("graduate-name");
+        if (nameBox) {
+            nameBox.textContent = graduates[index];
+        }
 
-    localStorage.setItem("graduateIndex", (index + 1) % graduates.length);
+        localStorage.setItem("graduateIndex", (index + 1) % graduates.length);
+    };
 </script>
