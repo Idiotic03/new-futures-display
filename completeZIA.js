@@ -40,15 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Fetch content of the current .txt file
         fetchNewsContent(newsFiles[currentIndex]).then(content => {
-            // Insert the raw HTML content into the news-box
-            newsBox.innerHTML = content; // Since content is HTML formatted
+            // UPDATED: wrap in .event-html so your sizing styles apply
+            newsBox.innerHTML = '';
+            const wrapper = document.createElement('div');
+            wrapper.className = 'event-html';
+            wrapper.innerHTML = content; // content is HTML formatted
+            newsBox.appendChild(wrapper);
 
             // Toggle visibility to show the news-box with content
             elements.forEach(element => {
                 element.classList.add('visible');
             });
 
-            // Fade-out after the content has been visible for 12 seconds
+            // Fade-out after the content has been visible for 10 seconds
             setTimeout(() => {
                 elements.forEach(element => {
                     element.classList.remove('visible');
@@ -57,9 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Move to the next file
                 currentIndex = (currentIndex + 1) % newsFiles.length;
 
-                // Wait for the fade-out to complete, then show the next news item after 30 seconds
-                setTimeout(cycleThroughNews, 10000); // 30000ms = 30 seconds wait before showing the next item
-            }, 10000); // 12000ms = 12 seconds visible time
+                // Wait for the fade-out to complete, then show the next news item after 10 seconds
+                setTimeout(cycleThroughNews, 10000);
+            }, 10000);
         });
     }
 
