@@ -1,17 +1,14 @@
 <div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
-    <h2 style="color: #FF5733; font-family: 'Trebuchet MS', sans-serif; font-size: 2.8em; margin: 5px 0;">
-        📚 !TUTORING AVAILABLE! 📚
+    <h2 style="color: #FF5733; font-family: 'Trebuchet MS', sans-serif; font-size: 3.8em; margin: 5px 0;">
+        👶 WIC ON CAMPUS! 👶
     </h2>
-    <p style="font-size: 3.3em; color: #333; margin: 5px 0;">
-        EVERY TUESDAY & WEDNESDAY MORNING
+    <p style="font-size: 3.5em; color: #333; margin: 5px 0;">
+        Every Tuesday From
     </p>
-    <h3 style="color: #007BFF; font-family: 'Georgia', serif; font-size: 3em; margin: 5px 0;">
-        FROM 8:45 AM - 9:15 AM
+    <h3 style="color: #007BFF; font-family: 'Georgia', serif; font-size: 3.5em; margin: 5px 0;">
+        9:00 AM - 12:20 PM
     </h3>
-    <p style="font-size: 2em; color: #555; font-family: 'Verdana', sans-serif; margin: 5px 0;">
-        HELD IN THE CAFETERIA, STOP BY FOR SUPPORT!
-    </p>
-    <p style="font-size: 2em; color: #333; margin: 5px 0;">
-        ALL SUBJECTS WELCOME!
+    <p style="font-size: 3.5em; color: #555; font-family: 'Verdana', sans-serif; margin: 5px 0;">
+        STOP BY FOR SUPPORT AND RESOURCES!
     </p>
 </div>
