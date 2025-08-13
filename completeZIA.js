@@ -1,296 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=1920, height=540, initial-scale=1.0">
-  <title>Layered Images with Date, Time, and Weather</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      width: 1920px;
-      height: 540px;
-      overflow: hidden;
-      background-color: #FBBF66;
+document.addEventListener('DOMContentLoaded', () => {
+    // Elements to toggle visibility together
+    const elements = [
+        document.getElementById('duplicate-zia-logo'),
+        document.getElementById('duplicate-zia-lines'),
+        document.getElementById('news-box')
+    ].filter(Boolean);
+
+    let currentIndex = 0;
+    let newsFiles = [];
+
+    // --- A/B WEEK LABEL ----------------------------------------
+    function isAWeek() {
+        // Set your first A-week Monday here
+        const startDate = new Date('2024-08-05');
+        const nowDate = new Date();
+        const diffInDays = Math.floor((nowDate - startDate) / (1000 * 60 * 60 * 24));
+        const weeksPassed = Math.floor(diffInDays / 7);
+        return weeksPassed % 2 === 0 ? 'A' : 'B'; // even = A-week
     }
 
-    #news-box {
-      position: absolute;
-      top: 10%;
-      left: 71.2%;
-      transform: translateX(-50%);
-      width: 42%;
-      height: 33.5%;
-      background-color: white;
-      opacity: 0;
-      z-index: 997;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      transition: opacity 1s ease;
-      overflow: hidden;
-      padding: 10px;
+    function updateWeekLabel() {
+        const weekType = isAWeek(); // "A" or "B"
+        const container = document.getElementById('week-label-container');
+        const label = document.getElementById('week-label');
+        if (!container || !label) return;
+
+        // Set text like "A-WEEK" or "B-WEEK"
+        label.textContent = `${weekType}-WEEK BELL SCHEDULE`;
+
+        // Switch container color class
+        container.classList.remove('a-week', 'b-week');
+        container.classList.add(weekType.toLowerCase() + '-week');
     }
-    #news-box.visible { opacity: 0.8; }
+    // Run now and refresh occasionally (handles date rollover)
+    updateWeekLabel();
+    setInterval(updateWeekLabel, 60_000);
+    // -----------------------------------------------------------
 
-    #duplicate-zia-logo, #duplicate-zia-lines {
-      position: absolute;
-      top: 0;
-      left: 44.8%;
-      transform: translateX(-50%);
-      width: 110.3%;
-      height: 55.3%;
-      max-height: 100%;
-      object-fit: contain;
-      opacity: 0;
-      z-index: 999;
-      transition: opacity 1s ease;
-    }
-    #duplicate-zia-logo.visible,
-    #duplicate-zia-lines.visible,
-    #news-box.visible { opacity: 1; }
-
-    .layer {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      height: 50%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-
-    #layer1 { z-index: 1000; }
-    #layer5 {
-      z-index: 4;
-      object-fit: contain;
-      width: 110%;
-      height: 55%;
-      top: 0;
-      left: 45%;
-      transform: translateX(-50%);
-    }
-    #layer6 {
-      z-index: 2;
-      object-fit: contain;
-      width: 110%;
-      height: 55%;
-      top: 0;
-      left: 45%;
-      transform: translateX(-50%);
-    }
-    #layer1 { z-index: 1000; top: 10; }
-    #layer5 { z-index: 4; object-fit: fill; opacity: 0.7; }
-    #layer6 { z-index: 2; object-fit: fill; opacity: 0.7; }
-    #layer8 { z-index: 1; }
-
-    .moving-layer {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 200%;
-      display: flex;
-    }
-    #layer2 { z-index: 7; animation: moveLayer2 80s linear infinite; }
-    #layer3 { z-index: 6; animation: moveLayer3 160s linear infinite; }
-    #layer4 { z-index: 5; animation: moveLayer4 230s linear infinite; }
-    #layer7 { z-index: 3; animation: moveLayer5 110s linear infinite; }
-
-    @keyframes moveLayer2 { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    @keyframes moveLayer3 { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    @keyframes moveLayer4 { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    @keyframes moveLayer5 { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-    /* === Left column: Date/Time/Weather/Week === */
-    .date-time-weather {
-      position: absolute;
-      top: 20%;
-      left: 20px;
-      color: white;
-      font-size: 3.8em;
-      font-family: Arial, sans-serif;
-      z-index: 10;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-
-    .blink { animation: blink 1s steps(2, start) infinite; }
-    @keyframes blink { to { visibility: hidden; } }
-
-    .weather-container {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      margin-left: 2px;
-    }
-    #weather-icon {
-      width: 1.4em;
-      height: 1.4em;
-      margin-left: 10px;
-    }
-    #temperature { font-size: 1em; }
-
-    /* Week pill */
-    #week-label-container {
-      margin-top: 0.25em;
-      padding: 0.15em 0.6em;
-      border-radius: 0.4em;
-      text-align: center;
-      font-size: 0.8em;     /* relative to 3.8em parent */
-      font-weight: 750;
-      color: #fff;
-      display: inline-block; /* legacy-safe sizing */
-      align-self: flex-start;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-    .a-week { background-color: #d9534f; }  /* red (your choice) */
-    .b-week { background-color: #0275d8; }  /* blue */
-    #week-label { letter-spacing: 0.03em; }
-  </style>
-</head>
-<body>
-  <!-- Locked in place layers -->
-  <img src="Orange Background-06.png" id="layer8" class="layer" alt="Background">
-  <img src="Zia Lines-01.png" id="layer6" class="layer" alt="Zia Lines">
-  <img src="Zia Logo-01.png" id="layer5" class="layer" alt="Zia Logo">
-  <img src="NF LOGO v3.png" id="layer1" class="layer" alt="Logo1">
-
-  <!-- Moving layers with duplicates for seamless loop -->
-  <div id="layer2" class="moving-layer">
-    <img src="Brush-02.png" alt="Brush" style="width: 50%; height: 50%;">
-    <img src="Brush-02.png" alt="Brush" style="width: 50%; height: 50%;">
-  </div>
-  <div id="layer3" class="moving-layer">
-    <img src="Skyline-03.png" alt="Skyline" style="width: 50%; height: 50%;">
-    <img src="Skyline-03.png" alt="Skyline" style="width: 50%; height: 50%;">
-  </div>
-  <div id="layer4" class="moving-layer">
-    <img src="Mountains-04.png" alt="Mountains" style="width: 50%; height: 50%;">
-    <img src="Mountains-04.png" alt="Mountains" style="width: 50%; height: 50%;">
-  </div>
-  <div id="layer7" class="moving-layer">
-    <img src="Clouds-05.png" alt="Clouds" style="width: 50%; height: 50%;">
-    <img src="Clouds-05.png" alt="Clouds" style="width: 50%; height: 50%;">
-  </div>
-
-  <!-- Left column stack -->
-  <div class="date-time-weather">
-    <div id="date"></div>
-    <div id="time"></div>
-    <div class="weather-container">
-      <div id="temperature"></div>
-      <img src="" alt="Weather Icon" id="weather-icon">
-    </div>
-    <div id="week-label-container">
-      <span id="week-label"></span>
-    </div>
-  </div>
-
-  <!-- Fade duplicates + news box -->
-  <img src="Zia Logo-01.png" id="duplicate-zia-logo" class="fade-duplicate" alt="Duplicate Zia Logo">
-  <img src="Zia Lines-01.png" id="duplicate-zia-lines" class="fade-duplicate" alt="Duplicate Zia Lines">
-  <div id="news-box" class="fade-duplicate">
-    <p>Sample News Text</p>
-  </div>
-
-  <!-- Polyfill must load BEFORE your other JS -->
-  <script>
-  /* Minimal fetch polyfill + Promise fallback for older WebViews */
-  (function () {
-    if (!window.Promise) {
-      window.Promise = function (fn) {
-        var thenCb = null, catchCb = null, resolved = false, value;
-        function resolve(v){ resolved = true; value = v; if (thenCb) thenCb(v); }
-        function reject(e){ if (catchCb) catchCb(e); }
-        setTimeout(function(){ try{ fn(resolve, reject); } catch(e){ reject(e); }},0);
-        return {
-          then: function(cb){ thenCb = cb; if (resolved) thenCb(value); return this; },
-          catch: function(cb){ catchCb = cb; return this; }
-        };
-      };
-    }
-    if (!window.fetch) {
-      window.fetch = function (url, opts) {
-        return new Promise(function (resolve) {
-          var xhr = new XMLHttpRequest();
-          xhr.open((opts && opts.method) || 'GET', url, true);
-          xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4) {
-              var ok = xhr.status >= 200 && xhr.status < 300;
-              resolve({
-                ok: ok,
-                status: xhr.status,
-                text: function(){ return Promise.resolve(xhr.responseText); },
-                json: function(){
-                  try { return Promise.resolve(JSON.parse(xhr.responseText)); }
-                  catch(e){ return Promise.resolve({}); }
+    // Function to load list of .txt files from a JSON file
+    function loadNewsFiles() {
+        fetch('filelist.json') // Fetch the list of .txt files from a JSON file
+            .then(response => response.json())
+            .then(files => {
+                newsFiles = files;
+                if (newsFiles.length > 0) {
+                    cycleThroughNews();
                 }
-              });
-            }
-          };
-          xhr.onerror = function(){
-            resolve({
-              ok:false, status:0,
-              text:function(){return Promise.resolve('');},
-              json:function(){return Promise.resolve({});}
+            })
+            .catch(error => console.error('Error fetching file list:', error));
+    }
+
+    // Function to fetch content from a .txt file
+    function fetchNewsContent(fileName) {
+        return fetch(fileName)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .catch(error => console.error('Error fetching news:', error));
+    }
+
+    // Function to cycle through the news files and display their content
+    function cycleThroughNews() {
+        const newsBox = document.getElementById('news-box');
+        if (!newsBox) return;
+
+        // Fetch content of the current .txt file
+        fetchNewsContent(newsFiles[currentIndex]).then(content => {
+            // UPDATED: wrap in .event-html so your sizing styles apply
+            newsBox.innerHTML = '';
+            const wrapper = document.createElement('div');
+            wrapper.className = 'event-html';
+            wrapper.innerHTML = content; // content is HTML formatted
+            newsBox.appendChild(wrapper);
+
+            // Toggle visibility to show the news-box with content
+            elements.forEach(element => {
+                element.classList.add('visible');
             });
-          };
-          xhr.send((opts && opts.body) || null);
+
+            // Fade-out after the content has been visible for 10 seconds
+            setTimeout(() => {
+                elements.forEach(element => {
+                    element.classList.remove('visible');
+                });
+
+                // Move to the next file
+                currentIndex = (currentIndex + 1) % newsFiles.length;
+
+                // Wait for the fade-out to complete, then show the next news item after 10 seconds
+                setTimeout(cycleThroughNews, 10000);
+            }, 10000);
         });
-      };
-    }
-  })();
-  </script>
-
-  <!-- Load your main JS (news rotator + week pill logic) -->
-  <script src="completeZIA.js"></script>
-
-  <!-- Inline helpers, legacy-safe -->
-  <script>
-    function updateDateTime() {
-      var now = new Date();
-      var dateOptions = { weekday: 'long', month: 'long', day: 'numeric' };
-      var date = now.toLocaleDateString(undefined, dateOptions);
-
-      var hours = now.getHours();
-      var minutes = now.getMinutes();
-      var isPM = hours >= 12;
-      hours = hours % 12 || 12;
-      minutes = minutes < 10 ? ('0' + minutes) : minutes;
-      var period = isPM ? 'PM' : 'AM';
-      var time = hours + '<span class="blink">:</span>' + minutes + ' ' + period;
-
-      var dateEl = document.getElementById('date');
-      var timeEl = document.getElementById('time');
-      if (dateEl) dateEl.textContent = date;
-      if (timeEl) timeEl.innerHTML = time;
     }
 
-    function fetchWeather() {
-      var apiKey = '0a9d0eb96a87453dba2182529242308';
-      var city = 'Albuquerque';
-      var url = 'https://api.weatherapi.com/v1/current.json?key=' + apiKey + '&q=' + city + '&aqi=no';
-
-      fetch(url).then(function (response) {
-        return response.json();
-      }).then(function (data) {
-        var temperature = Math.round(data.current && data.current.temp_f ? data.current.temp_f : 0);
-        var iconUrl = 'https:' + (data.current && data.current.condition ? data.current.condition.icon : '');
-
-        var tempEl = document.getElementById('temperature');
-        var iconEl = document.getElementById('weather-icon');
-        if (tempEl) tempEl.innerHTML = temperature + '°F';
-        if (iconEl) iconEl.src = iconUrl;
-      }).catch(function (error) {
-        var tempEl = document.getElementById('temperature');
-        if (tempEl) tempEl.innerHTML = 'N/A';
-      });
-    }
-
-    setInterval(updateDateTime, 1000);
-    updateDateTime();
-    fetchWeather();
-    setInterval(fetchWeather, 60000);
-  </script>
-</body>
-</html>
+    // Start loading and cycling through news files
+    loadNewsFiles();
+});
