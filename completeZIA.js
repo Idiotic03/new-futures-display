@@ -4,10 +4,38 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('duplicate-zia-logo'),
         document.getElementById('duplicate-zia-lines'),
         document.getElementById('news-box')
-    ];
+    ].filter(Boolean);
 
     let currentIndex = 0;
     let newsFiles = [];
+
+    // --- A/B WEEK LABEL ----------------------------------------
+    function isAWeek() {
+        // Set your first A-week Monday here
+        const startDate = new Date('2024-08-05');
+        const nowDate = new Date();
+        const diffInDays = Math.floor((nowDate - startDate) / (1000 * 60 * 60 * 24));
+        const weeksPassed = Math.floor(diffInDays / 7);
+        return weeksPassed % 2 === 0 ? 'A' : 'B'; // even = A-week
+    }
+
+    function updateWeekLabel() {
+        const weekType = isAWeek(); // "A" or "B"
+        const container = document.getElementById('week-label-container');
+        const label = document.getElementById('week-label');
+        if (!container || !label) return;
+
+        // Set text like "A-WEEK" or "B-WEEK"
+        label.textContent = `${weekType}-WEEK BELL SCHEDULE`;
+
+        // Switch container color class
+        container.classList.remove('a-week', 'b-week');
+        container.classList.add(weekType.toLowerCase() + '-week');
+    }
+    // Run now and refresh occasionally (handles date rollover)
+    updateWeekLabel();
+    setInterval(updateWeekLabel, 60_000);
+    // -----------------------------------------------------------
 
     // Function to load list of .txt files from a JSON file
     function loadNewsFiles() {
@@ -37,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to cycle through the news files and display their content
     function cycleThroughNews() {
         const newsBox = document.getElementById('news-box');
+        if (!newsBox) return;
 
         // Fetch content of the current .txt file
         fetchNewsContent(newsFiles[currentIndex]).then(content => {
