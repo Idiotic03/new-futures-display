@@ -16,7 +16,7 @@
         
         #news-box {
             position: absolute;
-            top: 13%;
+            top: 10%;
             left: 71.2%;
             transform: translateX(-50%);
             width: 42%;
@@ -30,9 +30,7 @@
             padding: 10px;
         }
 
-        #news-box.visible {
-            opacity: 0.8;
-        }
+        #news-box.visible { opacity: 0.8; }
         
         #duplicate-zia-logo, #duplicate-zia-lines {
             position: absolute;
@@ -48,7 +46,9 @@
             transition: opacity 1s ease;
         }
 
-        #duplicate-zia-logo.visible, #duplicate-zia-lines.visible, #news-box.visible {
+        #duplicate-zia-logo.visible,
+        #duplicate-zia-lines.visible,
+        #news-box.visible {
             opacity: 1;
         }
 
@@ -103,75 +103,71 @@
         #layer4 { z-index: 5; animation: moveLayer4 230s linear infinite; }
         #layer7 { z-index: 3; animation: moveLayer5 110s linear infinite; }
 
-        @keyframes moveLayer2 {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
+        @keyframes moveLayer2 { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @keyframes moveLayer3 { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @keyframes moveLayer4 { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @keyframes moveLayer5 { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        @keyframes moveLayer3 {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        @keyframes moveLayer4 {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        @keyframes moveLayer5 {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
+        /* === Left column: Date/Time/Weather/Week === */
         .date-time-weather {
             position: absolute;
-            top: 35%;
+            top: 18%;              /* keep where you like it */
             left: 20px;
-            transform: translateY(-50%);
             color: white;
             font-size: 3.8em;
             font-family: Arial, sans-serif;
             z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;          /* reserves space so the week pill can sit at bottom */
         }
 
-        .blink {
-            animation: blink 1s steps(2, start) infinite;
-        }
-
-        @keyframes blink {
-            to { visibility: hidden; }
-        }
+        .blink { animation: blink 1s steps(2, start) infinite; }
+        @keyframes blink { to { visibility: hidden; } }
 
         .weather-container {
             display: flex;
-            align-items: left;
+            align-items: center;
             justify-content: flex-start;
-            margin-left: 2px
+            margin-left: 2px;
         }
         #weather-icon {
             width: 1.4em;
             height: 1.4em;
             margin-left: 10px;
         }
-        #temperature {
-            font-size: 1em;
-        }
+        #temperature { font-size: 1em; }
 
-        /* Week label style */
-        #week-label {
-        font-size: 0.8em;
-        margin-top: 4px; /* Reduced space */
-        color: #fff;
-        line-height: 0.3; /* Keeps it tight to the above content */
-    }
+        /* Week pill */
+        #week-label-container {
+            /* remove margin-top:auto; so it no longer drops to the bottom */
+ /* sits close to weather */
+            padding: 0.15em 0.6em;    /* smaller pill */
+            border-radius: 0.4em;
+            text-align: center;
+            font-size: 0.8em;         /* smaller text relative to 3.8em parent */
+            font-weight: 750;
+            color: #fff;
+            width: fit-content;
+            display: inline-block;     /* sizes to content */
+            align-self: flex-start;    /* left-align with the stack */
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+        /* Color themes */
+        .a-week { background-color: #d9534f; }  /* red */
+        .b-week { background-color: #0275d8; }  /* blue */
+        /* The actual text node */
+        #week-label { letter-spacing: 0.03em; }
     </style>
 </head>
 <body>
+    <!-- Locked in place layers -->
     <img src="Orange Background-06.png" id="layer8" class="layer" alt="Background">
     <img src="Zia Lines-01.png" id="layer6" class="layer" alt="Zia Lines"> 
     <img src="Zia Logo-01.png" id="layer5" class="layer" alt="Zia Logo">
     <img src="NF LOGO v3.png" id="layer1" class="layer" alt="Logo1">
 
+    <!-- Moving layers with duplicates for seamless loop -->
     <div id="layer2" class="moving-layer">
         <img src="Brush-02.png" alt="Brush" style="width: 50%; height: 50%;">
         <img src="Brush-02.png" alt="Brush" style="width: 50%; height: 50%;">
@@ -192,6 +188,7 @@
         <img src="Clouds-05.png" alt="Clouds" style="width: 50%; height: 50%;">
     </div>
 
+    <!-- Left column stack -->
     <div class="date-time-weather">
         <div id="date"></div>
         <div id="time"></div>
@@ -199,22 +196,28 @@
             <div id="temperature"></div>
             <img src="" alt="Weather Icon" id="weather-icon">
         </div>
-        <div id="week-label"></div> <!-- Moved up to be part of the same block -->
+
+        <!-- Week pill at the bottom of this column -->
+        <div id="week-label-container">
+            <span id="week-label"></span>
+        </div>
     </div>
 
-
+    <!-- Fade duplicates + news box -->
     <img src="Zia Logo-01.png" id="duplicate-zia-logo" class="fade-duplicate" alt="Duplicate Zia Logo">
     <img src="Zia Lines-01.png" id="duplicate-zia-lines" class="fade-duplicate" alt="Duplicate Zia Lines">
     <div id="news-box" class="fade-duplicate">
         <p>Sample News Text</p>
     </div>
 
+    <!-- Your existing scripts -->
     <script src="completeZIA.js"></script>
     <script>
         function updateDateTime() {
             const now = new Date();
             const dateOptions = { weekday: 'long', month: 'long', day: 'numeric' };
             const date = now.toLocaleDateString(undefined, dateOptions);
+
             let hours = now.getHours();
             let minutes = now.getMinutes();
             const isPM = hours >= 12;
@@ -222,6 +225,7 @@
             minutes = minutes < 10 ? '0' + minutes : minutes;
             const period = isPM ? 'PM' : 'AM';
             const time = `${hours}<span class="blink">:</span>${minutes} ${period}`;
+
             document.getElementById('date').textContent = date;
             document.getElementById('time').innerHTML = time;
         }
@@ -235,6 +239,7 @@
                 const data = await response.json();
                 const temperature = Math.round(data.current.temp_f);
                 const iconUrl = "https:" + data.current.condition.icon;
+
                 document.getElementById('temperature').innerHTML = `${temperature}°F`;
                 document.getElementById('weather-icon').src = iconUrl;
             } catch (error) {
@@ -243,25 +248,11 @@
             }
         }
 
-        function isAWeek() {
-            const startDate = new Date("2024-08-05");
-            const nowDate = new Date();
-            const diffInDays = Math.floor((nowDate - startDate) / (1000 * 60 * 60 * 24));
-            const weeksPassed = Math.floor(diffInDays / 7);
-            return weeksPassed % 2 === 0 ? "A" : "B";
-        }
-
-        function updateWeekLabel() {
-            const weekType = isAWeek();
-            document.getElementById('week-label').textContent =
-                `${weekType}-Week Bell Schedule`;
-        }
-
+        // (JS to set the week text + color will be added next)
         setInterval(updateDateTime, 1000);
         updateDateTime();
         fetchWeather();
         setInterval(fetchWeather, 60000);
-        updateWeekLabel();
     </script>
 </body>
 </html>
