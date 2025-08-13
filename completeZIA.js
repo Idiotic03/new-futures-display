@@ -1,101 +1,124 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Elements to toggle visibility together
-    const elements = [
-        document.getElementById('duplicate-zia-logo'),
-        document.getElementById('duplicate-zia-lines'),
-        document.getElementById('news-box')
-    ].filter(Boolean);
+document.addEventListener('DOMContentLoaded', function () {
+  // Elements to toggle visibility together (filter out nulls safely)
+  var elements = [];
+  var e1 = document.getElementById('duplicate-zia-logo');
+  var e2 = document.getElementById('duplicate-zia-lines');
+  var e3 = document.getElementById('news-box');
+  if (e1) elements.push(e1);
+  if (e2) elements.push(e2);
+  if (e3) elements.push(e3);
 
-    let currentIndex = 0;
-    let newsFiles = [];
+  var currentIndex = 0;
+  var newsFiles = [];
 
-    // --- A/B WEEK LABEL ----------------------------------------
-    function isAWeek() {
-        // Set your first A-week Monday here
-        const startDate = new Date('2024-08-05');
-        const nowDate = new Date();
-        const diffInDays = Math.floor((nowDate - startDate) / (1000 * 60 * 60 * 24));
-        const weeksPassed = Math.floor(diffInDays / 7);
-        return weeksPassed % 2 === 0 ? 'A' : 'B'; // even = A-week
+  // --- A/B WEEK LABEL ---
+  function isAWeek() {
+    // First A-week Monday
+    var startDate = new Date('2024-08-05');
+    var nowDate = new Date();
+    var diffInDays = Math.floor((nowDate - startDate) / (1000 * 60 * 60 * 24));
+    var weeksPassed = Math.floor(diffInDays / 7);
+    return (weeksPassed % 2 === 0) ? 'A' : 'B';
+  }
+
+  function updateWeekLabel() {
+    var weekType = isAWeek(); // "A" or "B"
+    var container = document.getElementById('week-label-container');
+    var label = document.getElementById('week-label');
+    if (!container || !label) return;
+
+    label.textContent = weekType + '-WEEK BELL SCHEDULE';
+
+    // toggle pill color
+    container.className = container.className
+      .replace(/\ba-week\b/g, '')
+      .replace(/\bb-week\b/g, '')
+      .replace(/\s{2,}/g, ' ')
+      .trim();
+
+    container.className += (container.className ? ' ' : '') + (weekType === 'A' ? 'a-week' : 'b-week');
+  }
+  updateWeekLabel();
+  setInterval(updateWeekLabel, 60000);
+
+  // --- UTIL: simple XHR helper ---
+  function xhrGet(url, asJson, cb) {
+    try {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', url, true);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status >= 200 && xhr.status < 300) {
+            if (asJson) {
+              try { cb(null, JSON.parse(xhr.responseText)); }
+              catch (e) { cb(null, []); }
+            } else {
+              cb(null, xhr.responseText);
+            }
+          } else {
+            cb(new Error('HTTP ' + xhr.status));
+          }
+        }
+      };
+      xhr.onerror = function () { cb(new Error('Network error')); };
+      xhr.send(null);
+    } catch (err) {
+      cb(err);
     }
+  }
 
-    function updateWeekLabel() {
-        const weekType = isAWeek(); // "A" or "B"
-        const container = document.getElementById('week-label-container');
-        const label = document.getElementById('week-label');
-        if (!container || !label) return;
+  // Load list of .txt files
+  function loadNewsFiles() {
+    xhrGet('filelist.json', true, function (err, files) {
+      if (err) {
+        console.log('Error fetching file list:', err);
+        return;
+      }
+      newsFiles = files || [];
+      if (newsFiles.length > 0) cycleThroughNews();
+    });
+  }
 
-        // Set text like "A-WEEK" or "B-WEEK"
-        label.textContent = `${weekType}-WEEK BELL SCHEDULE`;
+  // Fetch one news file (raw HTML)
+  function fetchNewsContent(fileName, cb) {
+    xhrGet(fileName, false, function (err, text) {
+      if (err) {
+        console.log('Error fetching news:', err);
+        cb(null, '<div class="event-html">Unable to load: ' + fileName + '</div>');
+        return;
+      }
+      cb(null, text);
+    });
+  }
 
-        // Switch container color class
-        container.classList.remove('a-week', 'b-week');
-        container.classList.add(weekType.toLowerCase() + '-week');
-    }
-    // Run now and refresh occasionally (handles date rollover)
-    updateWeekLabel();
-    setInterval(updateWeekLabel, 60_000);
-    // -----------------------------------------------------------
+  // Cycle news
+  function cycleThroughNews() {
+    var newsBox = document.getElementById('news-box');
+    if (!newsBox || newsFiles.length === 0) return;
 
-    // Function to load list of .txt files from a JSON file
-    function loadNewsFiles() {
-        fetch('filelist.json') // Fetch the list of .txt files from a JSON file
-            .then(response => response.json())
-            .then(files => {
-                newsFiles = files;
-                if (newsFiles.length > 0) {
-                    cycleThroughNews();
-                }
-            })
-            .catch(error => console.error('Error fetching file list:', error));
-    }
+    fetchNewsContent(newsFiles[currentIndex], function (_err, content) {
+      newsBox.innerHTML = '';
+      var wrapper = document.createElement('div');
+      wrapper.className = 'event-html';
+      wrapper.innerHTML = (content || '');
+      newsBox.appendChild(wrapper);
 
-    // Function to fetch content from a .txt file
-    function fetchNewsContent(fileName) {
-        return fetch(fileName)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.text();
-            })
-            .catch(error => console.error('Error fetching news:', error));
-    }
+      // show
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].classList.add('visible');
+      }
 
-    // Function to cycle through the news files and display their content
-    function cycleThroughNews() {
-        const newsBox = document.getElementById('news-box');
-        if (!newsBox) return;
+      // visible for 10s
+      setTimeout(function () {
+        for (var j = 0; j < elements.length; j++) {
+          elements[j].classList.remove('visible');
+        }
+        currentIndex = (currentIndex + 1) % newsFiles.length;
+        // wait 10s, show next
+        setTimeout(cycleThroughNews, 10000);
+      }, 10000);
+    });
+  }
 
-        // Fetch content of the current .txt file
-        fetchNewsContent(newsFiles[currentIndex]).then(content => {
-            // UPDATED: wrap in .event-html so your sizing styles apply
-            newsBox.innerHTML = '';
-            const wrapper = document.createElement('div');
-            wrapper.className = 'event-html';
-            wrapper.innerHTML = content; // content is HTML formatted
-            newsBox.appendChild(wrapper);
-
-            // Toggle visibility to show the news-box with content
-            elements.forEach(element => {
-                element.classList.add('visible');
-            });
-
-            // Fade-out after the content has been visible for 10 seconds
-            setTimeout(() => {
-                elements.forEach(element => {
-                    element.classList.remove('visible');
-                });
-
-                // Move to the next file
-                currentIndex = (currentIndex + 1) % newsFiles.length;
-
-                // Wait for the fade-out to complete, then show the next news item after 10 seconds
-                setTimeout(cycleThroughNews, 10000);
-            }, 10000);
-        });
-    }
-
-    // Start loading and cycling through news files
-    loadNewsFiles();
+  loadNewsFiles();
 });
