@@ -13,7 +13,7 @@
       overflow: hidden;
       background-color: #FBBF66;
     }
-
+    
     #news-box {
       position: absolute;
       top: 10%;
@@ -30,7 +30,7 @@
       padding: 10px;
     }
     #news-box.visible { opacity: 0.8; }
-
+    
     #duplicate-zia-logo, #duplicate-zia-lines {
       position: absolute;
       top: 0;
@@ -58,7 +58,6 @@
       max-height: 100%;
       object-fit: contain;
     }
-
     #layer1 { z-index: 1000; }
     #layer5 {
       z-index: 4;
@@ -130,28 +129,28 @@
     }
     #temperature { font-size: 1em; }
 
-    /* Week pill */
+    /* Week pill (legacy-safe) */
     #week-label-container {
       margin-top: 0.25em;
       padding: 0.15em 0.6em;
       border-radius: 0.4em;
       text-align: center;
-      font-size: 0.8em;     /* relative to 3.8em parent */
-      font-weight: 750;
+      font-size: 0.8em;
+      font-weight: 800;
       color: #fff;
-      display: inline-block; /* legacy-safe sizing */
-      align-self: flex-start;
+      display: inline-block;   /* legacy-safe */
+      /* no width: fit-content; */
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
-    .a-week { background-color: #d9534f; }  /* red (your choice) */
-    .b-week { background-color: #0275d8; }  /* blue */
+    .a-week { background-color: #28a745; } /* green */
+    .b-week { background-color: #0275d8; } /* blue */
     #week-label { letter-spacing: 0.03em; }
   </style>
 </head>
 <body>
   <!-- Locked in place layers -->
   <img src="Orange Background-06.png" id="layer8" class="layer" alt="Background">
-  <img src="Zia Lines-01.png" id="layer6" class="layer" alt="Zia Lines">
+  <img src="Zia Lines-01.png" id="layer6" class="layer" alt="Zia Lines"> 
   <img src="Zia Logo-01.png" id="layer5" class="layer" alt="Zia Logo">
   <img src="NF LOGO v3.png" id="layer1" class="layer" alt="Logo1">
 
@@ -193,7 +192,7 @@
     <p>Sample News Text</p>
   </div>
 
-  <!-- Polyfill must load BEFORE your other JS -->
+  <!-- Polyfill (must load BEFORE your script) -->
   <script>
   /* Minimal fetch polyfill + Promise fallback for older WebViews */
   (function () {
@@ -242,10 +241,10 @@
   })();
   </script>
 
-  <!-- Load your main JS (news rotator + week pill logic) -->
-  <script src="completeZIA.js"></script>
+  <!-- Load your ES5/XHR script (cache-busted) -->
+  <script src="completeZIA.js?v=es5_1"></script>
 
-  <!-- Inline helpers, legacy-safe -->
+  <!-- Inline helpers (ES5) -->
   <script>
     function updateDateTime() {
       var now = new Date();
@@ -271,6 +270,7 @@
       var city = 'Albuquerque';
       var url = 'https://api.weatherapi.com/v1/current.json?key=' + apiKey + '&q=' + city + '&aqi=no';
 
+      // uses polyfilled fetch if needed
       fetch(url).then(function (response) {
         return response.json();
       }).then(function (data) {
@@ -281,7 +281,7 @@
         var iconEl = document.getElementById('weather-icon');
         if (tempEl) tempEl.innerHTML = temperature + '°F';
         if (iconEl) iconEl.src = iconUrl;
-      }).catch(function (error) {
+      }).catch(function () {
         var tempEl = document.getElementById('temperature');
         if (tempEl) tempEl.innerHTML = 'N/A';
       });
