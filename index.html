@@ -125,11 +125,11 @@
 
         .date-time-weather {
             position: absolute;
-            top: 40%;
+            top: 35%;
             left: 20px;
             transform: translateY(-50%);
             color: white;
-            font-size: 4em;
+            font-size: 3.8em;
             font-family: Arial, sans-serif;
             z-index: 10;
         }
@@ -159,11 +159,11 @@
 
         /* Week label style */
         #week-label {
-            font-size: 0.5em;
-
-            margin-top: 0px;
-            color: #fff;
-        }
+        font-size: 0.8em;
+        margin-top: 4px; /* Reduced space */
+        color: #fff;
+        line-height: 0.3; /* Keeps it tight to the above content */
+    }
     </style>
 </head>
 <body>
@@ -199,8 +199,9 @@
             <div id="temperature"></div>
             <img src="" alt="Weather Icon" id="weather-icon">
         </div>
-        <div id="week-label"></div> <!-- NEW: Shows A/B Week -->
+        <div id="week-label"></div> <!-- Moved up to be part of the same block -->
     </div>
+
 
     <img src="Zia Logo-01.png" id="duplicate-zia-logo" class="fade-duplicate" alt="Duplicate Zia Logo">
     <img src="Zia Lines-01.png" id="duplicate-zia-lines" class="fade-duplicate" alt="Duplicate Zia Lines">
