@@ -3,7 +3,7 @@
         🌟 SCHOOL-BASED HEALTH CENTER 🌟
     </h2>
     <p style="font-size: 2.6em; color: #222; margin: 5px 0; font-weight: bold;">
-        Every Tuesday
+        Every Wednesday
     </p>
     <h3 style="color: #00BFFF; font-family: 'Georgia', serif; font-size: 2.8em; margin: 5px 0; text-shadow: 1px 1px #fff;">
         9:00 AM – 1:00 PM
