@@ -1,17 +1,18 @@
 <div style="text-align: center; max-width: 98%; margin: 0 auto; overflow: hidden;">
     <h2 style="color: #FF9800; font-family: 'Trebuchet MS', sans-serif; font-size: 3em; margin: 5px 0; text-shadow: 2px 2px #fff;">
-        📘 IT'S 🅱️-WEEK! 📘
+        📘 IT'S B-WEEK! 📘
     </h2>
     <p style="font-size: 2.6em; color: #222; margin: 5px 0; font-weight: bold;">
         Follow the
     </p>
     <h3 style="color: #00BFFF; font-family: 'Georgia', serif; font-size: 2.8em; margin: 5px 0; text-shadow: 1px 1px #fff;">
-        🅱️-Week Bell Schedule
+        B-Week Bell Schedule
     </h3>
     <p style="font-size: 2.5em; color: #28A745; font-family: 'Verdana', sans-serif; margin: 5px 0; font-weight: bold;">
-        🅱️E the 🅱️est you!
+        BE the Best you!
     </p>
 </div>
+
 
 
 
