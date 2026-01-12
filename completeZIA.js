@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // --- A/B WEEK LABEL ---
   function isAWeek() {
     // First A-week Monday
-    var startDate = new Date('2025-10-20');
+    var startDate = new Date('2025-08-05');
     var nowDate = new Date();
     var diffInDays = Math.floor((nowDate - startDate) / (1000 * 60 * 60 * 24));
     var weeksPassed = Math.floor(diffInDays / 7);
@@ -122,4 +122,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
   loadNewsFiles();
 });
+
 
